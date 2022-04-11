@@ -5,11 +5,12 @@ import (
 )
 
 func isAnagram(A string, B string) bool {
-	//
+	// word length not same, so is not anagram
 	if len(A) != len(B) {
 		return false
 	}
 
+	// Verify two map data is same
 	return reflect.DeepEqual(
 		mapLetterFreq(A),
 		mapLetterFreq(B),
